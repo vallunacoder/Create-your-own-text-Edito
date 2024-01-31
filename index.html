@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- remember to link your css and your js -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- This link will give us access to Font awesome so we can grab the icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>The online text editor</title>
+  </head>
+  <body>
+    <!-- let's build our main  container div -->
+    <div class="container">
+      <!-- this is for the options for our text editor -->
+      <div class="options">
+        <!-- here we have buttons with all the options -->
+
+        <!-- bold btn -->
+        <button id="bold" class="option-button format">
+          <i class="fa-solid fa-bold"></i>
+        </button>
+
+        <!-- superscript btn -->
+
+        <button id="superscript" class="option-button script">
+          <i class="fa-solid fa-superscript"></i>
+        </button>
+
+        <!-- subscript btn -->
+        <button id="subscript" class="option-button script">
+          <i class="fa-solid fa-subscript"></i>
+        </button>
+
+        <!-- insert  Order list btn - with a div  -->
+        <button id="insertOrderdList" class="option-button">
+          <div class="fa-solid fa-list-ol"></div>
+        </button>
+
+        <!-- insert  Un Order list btn -->
+        <button id="inserUnorderedList" class="option-button">
+          <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- Undo btn -->
+        <button id="undo" class="option-button">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <!-- Redo btn -->
+        <button id="redo" class="option-button">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <!-- Create link btn -->
+        <button id="createLink" class="adv-option-button">
+          <i class="fa fa-link"></i>
+        </button>
+
+        <!-- delete link btn -->
+        <button id="deleteLink" class="option-button">
+          <i class="fa delete-link"></i>
+        </button>
+
+        <!-- justify left btn -->
+        <button id="justifyLeft" class="option-button align">
+          <i class="fa-solid fa-align-left"></i>
+        </button>
+
+        <!-- justify Center btn -->
+        <button id="justifyCenter" class="option-button align">
+          <i class="fa-solid fa-align-center"></i>
+        </button>
+
+        <!-- justify Right btn -->
+        <button id="justifyRight" class="option-button align">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+
+        <!-- justify Full btn -->
+        <button id="justifyFull" class="option-button align">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+
+        <!--  indent btn -->
+        <button id="indent" class="option-button spacing">
+          <i class="fa-solid fa-indent"></i>
+        </button>
+
+        <!--   out indent btn -->
+        <button id="outdent" class="option-button spacing">
+          <i class="fa-solid fa-outdent"></i>
+        </button>
+
+        <!-- let's make the option for the tittle sizes  -->
+
+        <select id="formatBlock" class="adv-option-button">
+          <option value="H1">H1</option>
+          <option value="H2">H2</option>
+          <option value="H3">H3</option>
+          <option value="H4">H4</option>
+          <option value="H5">H5</option>
+          <option value="H6">H6</option>
+        </select>
+
+        <!-- this is for our font style -->
+        <select id="fontName" class="adv-option-button"></select>
+
+        <!-- this is for the size of the font -->
+        <select id="fontSize" class="adv-option-button"></select>
+
+        <!-- this is for the color options -->
+        <div class="input-wrapper">
+          <input type="color" id="foreColor" class="adv-option-button" />
+          <label for="foreColor"> Font color </label>
+        </div>
+
+        <div class="input-wrapper">
+          <input type="color" id="backColor" class="adv-option-button" />
+          <label for="backColor"> Highlight color </label>
+        </div>
+      </div>
+
+      <!-- now under this panel of options we have space for out text -->
+      <div id="text-input" contenteditable="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
